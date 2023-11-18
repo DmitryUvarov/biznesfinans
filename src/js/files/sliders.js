@@ -188,6 +188,35 @@ function initSliders() {
 			},
 		})
 	}
+	if (document.querySelector('.reviews__slider')) {
+		new Swiper('.reviews__slider', {
+			modules: [Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 20,
+			speed: 800,
+			lazyPreloaderClass: 'preloader',
+			pagination: {
+				el: '.reviews__slider .pagination',
+				clickable: true,
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1.3,
+					spaceBetween: 15,
+				},
+				768: {
+					slidesPerView: 2.5,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+			},
+		});
+	}
 	}
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
