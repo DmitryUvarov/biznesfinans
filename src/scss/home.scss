@@ -506,3 +506,65 @@
   &__text {
   }
 }
+
+//========================================================================================================================================================
+
+.steps {
+  @include adaptiveValue("padding-top", 80, 35);
+  @include adaptiveValue("padding-bottom", 40, 20);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 30);
+  }
+
+  &__items {
+    position: relative;
+    display: grid;
+    @include adaptiveValue("gap", 200, 70, 0, 1210, 767);
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: toRem(30) toRem(20);
+    }
+
+    @media (min-width: $mobile) {
+      @include adaptiveValue("padding-top", 90, 65, 0, 1210, 767);
+      &::before {
+        content: "";
+        background-image: url("@img/steps/01.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        @include adaptiveValue("height", 90, 65, 0, 1210, 767);
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 10, 7);
+    max-width: toRem(168);
+
+    @media (min-width: $mobile) {
+      &:nth-child(odd) {
+        padding-top: toRem(18);
+      }
+    }
+  }
+
+  &__item-title {
+    color: #1e1e1e;
+    @include adaptiveValue("font-size", 24, 22);
+    font-weight: 500;
+    line-height: 133.3%; /* 32/24 */
+  }
+
+  &__item-text {
+  }
+}
