@@ -114,7 +114,9 @@
       max-width: toRem(425);
     }
   }
+}
 
+.form-submit {
   &__input {
     margin-bottom: toRem(12);
   }

@@ -1,10 +1,17 @@
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
-			</div>
+			<button data-close type="button" class="popup__close _icon-close"></button>
+
+			<div class="popup__title title">ПОДАТЬ ЗАЯВКУ</div>
+			<div class="popup__text text">Введите свой номер телефона и имя, мы перезвоним и обсудим Вашу ситуацию и сообщим предварительное решение</div>
+
+			<form action="#" class="popup__form form-submit">
+				<input autocomplete="off" type="text" name="name" placeholder="Ваше имя" class="form-submit__input input">
+				<input autocomplete="off" type="text" name="phone" placeholder="Ваш телефон" class="form-submit__input input">
+				<button class="form-submit__button button">Узнать решение</button>
+			</form>
+
 		</div>
 	</div>
 </div>
