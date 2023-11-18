@@ -85,14 +85,18 @@
         flex-direction: row-reverse;
       }
     }
+
+    .text-block__title {
+      max-width: toRem(480);
+      @include adaptiveValue("margin-bottom", 40, 15);
+    }
   }
 
   &__content {
   }
 
   &__title {
-    max-width: toRem(480);
-    @include adaptiveValue("margin-bottom", 40, 15);
+    @include adaptiveValue("margin-bottom", 50, 25);
   }
   &__text {
     max-width: toRem(560);
@@ -146,7 +150,7 @@
   }
 
   .card-people {
-    background-color: #f5f5f5;
+    background-color: #fff;
   }
 }
 

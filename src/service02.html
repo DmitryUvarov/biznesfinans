@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"МИКРОЗАЙМ"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="screen">
+                <div class="screen__container">
+                    <div class="screen__body">
+                        <div class="screen__image-ibg"><img src="@img/screen/03.jpg" alt=""></div>
+                        <div class="screen__top">
+                            <h1 class="screen__title">МИКРОЗАЙМ</h1>
+                            <span>до 50 000 000 сум</span>
+                        </div>
+                        <div class="screen__items">
+                            <p>от 2,9% до 9% в месяц</p>
+                            <p>Срок: 24 месяцев</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="service">
+                <div class="service__container">
+                    <div class="service__body">
+                        <div class="service__items">
+                            <div class="service__text">
+                                <b>На:</b>
+                                <ul>
+                                    <li>На собственные нужды</li>
+                                </ul>
+                            </div>
+                            <div class="service__text">
+                                <b>Требования к заёмщику:</b>
+                                <ul>
+                                    <li>Возраст от 21 до 65 лет</li>
+                                </ul>
+                            </div>
+                            <div class="service__text">
+                                <b>Срок получения кредита:</b>
+                                <ul>
+                                    <li>2 часа</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="simple">
+                <div class="simple__container">
+                    <h2 class="simple__title title">3 ПРОСТЫХ ШАГА ПОЛУЧИТЬ КРЕДИТ</h2>
+                    <div class="simple__items">
+                        <div class="simple__item item-simple">
+                            <div class="item-simple__ico"><img src="@img/simple/01.svg" alt=""></div>
+                            <div class="item-simple__text text">Предоставление документов</div>
+                        </div>
+                        <div class="simple__item item-simple">
+                            <div class="item-simple__ico"><img src="@img/simple/02.svg" alt=""></div>
+                            <div class="item-simple__text text">Заключение договора</div>
+                        </div>
+                        <div class="simple__item item-simple">
+                            <div class="item-simple__ico"><img src="@img/simple/03.svg" alt=""></div>
+                            <div class="item-simple__text text">Получение Денег</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            @@include('html/_calculator.htm',{})
+
+            <section class="simple">
+                <div class="simple__container">
+                    <h2 class="simple__title title">3 ПРОСТЫХ ШАГА ПОЛУЧИТЬ КРЕДИТ</h2>
+                    <div class="simple__items">
+                        <div class="simple__item item-simple">
+                            <div class="item-simple__ico"><img src="@img/simple/01.svg" alt=""></div>
+                            <div class="item-simple__text text">Предоставление документов</div>
+                        </div>
+                        <div class="simple__item item-simple">
+                            <div class="item-simple__ico"><img src="@img/simple/02.svg" alt=""></div>
+                            <div class="item-simple__text text">Заключение договора</div>
+                        </div>
+                        <div class="simple__item item-simple">
+                            <div class="item-simple__ico"><img src="@img/simple/03.svg" alt=""></div>
+                            <div class="item-simple__text text">Получение Денег</div>
+                        </div>
+                    </div>
+                    <button class="simple__button button" data-popup="#simple">Подать заявку</button>
+                </div>
+            </section>
+
+
+        </main>
+        @@include('html/_footer.htm',{})
+        @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

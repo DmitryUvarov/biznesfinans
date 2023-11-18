@@ -1,0 +1,142 @@
+.calculate {
+  border-radius: toRem(15);
+  background: #fff;
+
+  @media (min-width: $mobile) {
+    max-width: toRem(435);
+  }
+
+  @include adaptiveValue("padding-top", 28, 20);
+  @include adaptiveValue("padding-bottom", 28, 20);
+  @include adaptiveValue("padding-left", 25, 15, 0, 1210, 991);
+  @include adaptiveValue("padding-right", 25, 15, 0, 1210, 991);
+  &__title {
+    color: #1e1e1e;
+    text-align: center;
+    @include adaptiveValue("font-size", 35, 28);
+    font-weight: 500;
+    line-height: 114.3%; /* 40/35 */
+    text-transform: uppercase;
+
+    @include adaptiveValue("margin-bottom", 23, 18);
+  }
+
+  &__form {
+    display: grid;
+    gap: toRem(10);
+  }
+
+  &__line {
+  }
+
+  &__input {
+    border-radius: toRem(40);
+    background: #e8e8e8;
+    border: toRem(1) solid #e8e8e8;
+    color: #7e7e7e;
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 400;
+    line-height: 20px; /* 111.111% */
+    @include adaptiveValue("height", 62, 48);
+    width: 100%;
+    padding: 0 toRem(27);
+
+    &:focus {
+      border-color: #1e1e1e;
+      outline: none;
+    }
+  }
+
+  &__range {
+  }
+
+  &__bottom {
+    margin-top: toRem(4);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: toRem(10);
+  }
+
+  &__bottom-item {
+  }
+
+  &__bottom-title {
+    color: #7e7e7e;
+    @include adaptiveValue("font-size", 17, 15);
+    line-height: 117.6%; /* 20/17 */
+    margin-bottom: toRem(2);
+  }
+
+  &__bottom-number {
+    color: #1e1e1e;
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 500;
+    line-height: 111.1%; /* 20/18 */
+  }
+
+  &__button {
+    margin-top: toRem(8);
+  }
+}
+
+//========================================================================================================================================================
+
+.calculator {
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 80, 40);
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(20);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 25);
+  }
+
+  &__image-ibg {
+    flex: 0 0 percent(584, 1180);
+    border-radius: toRem(15);
+    overflow: hidden;
+    padding-bottom: percent(603, 1180);
+  }
+
+  &__calculate {
+    background-color: #f5f5f5;
+    @media (min-width: $mobile) {
+      flex: 0 1 toRem(435);
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.range {
+  [data-range-line] {
+    width: calc(100% - toRem(40));
+    margin: 0 toRem(20);
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: toRem(10);
+
+    margin: toRem(13) toRem(15) 0;
+  }
+
+  &__content-item {
+    color: #7e7e7e;
+    font-size: 17px;
+    line-height: 117.6%; /* 20/17 */
+  }
+}
