@@ -8,6 +8,21 @@
   line-height: 111.1%; /* 20/18 */
 }
 
+.title {
+  color: #1e1e1e;
+  font-family: "Futura PT";
+  @include adaptiveValue("font-size", 50, 32);
+  font-weight: 500;
+  line-height: 100%; /* 80% */
+  text-transform: uppercase;
+
+  text-align: center;
+
+  &_left {
+    text-align: start;
+  }
+}
+
 //========================================================================================================================================================
 
 .pagination {
@@ -32,6 +47,20 @@
   }
   .swiper-pagination-bullet-active {
     background-color: #1e1e1e;
+  }
+
+  &_blue {
+    .swiper-pagination-bullet {
+      background-color: #fff;
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: #271c6c;
+        }
+      }
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #271c6c;
+    }
   }
 }
 

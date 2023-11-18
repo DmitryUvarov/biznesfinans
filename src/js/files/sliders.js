@@ -130,7 +130,50 @@ function initSliders() {
 
 
 	});
-}
+	if (document.querySelector('.products__slider')) {
+				new Swiper('.products__slider', {
+				modules: [Pagination, Autoplay],
+				observer: true,
+				observeParents: true,
+				slidesPerView: 4,
+				spaceBetween: 20,
+				speed: 800,
+
+				lazyPreloaderClass: 'preloader',
+
+				effect: 'fade',
+
+				pagination: {
+					el: '.products__slider .pagination',
+					clickable: true,
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1.3,
+						spaceBetween: 15,
+					},
+					500: {
+						slidesPerView: 1.5,
+						spaceBetween: 15,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					992: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					1210: {
+						slidesPerView: 4,
+						spaceBetween: 20,
+					},
+				},
+
+
+			});
+		}
+	}
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
