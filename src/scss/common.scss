@@ -2,6 +2,42 @@
 
 //========================================================================================================================================================
 
+.text {
+  color: #eae5e5;
+  @include adaptiveValue("font-size", 18, 16);
+  line-height: 111.1%; /* 20/18 */
+}
+
+//========================================================================================================================================================
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include adaptiveValue("gap", 10, 8);
+  .swiper-pagination-bullet {
+    cursor: pointer;
+    @include adaptiveValue("width", 24, 18);
+    @include adaptiveValue("height", 24, 18);
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #1e1e1e;
+      }
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #1e1e1e;
+  }
+}
+
+//========================================================================================================================================================
+//========================================================================================================================================================
+
 // .fancybox__container {
 //     max-width: none;
 // }

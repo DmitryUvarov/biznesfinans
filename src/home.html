@@ -8,6 +8,118 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
+
+
+			<section class="hero">
+				<div class="hero__body">
+					<div class="hero__slider swiper">
+						<div class="hero__wrapper swiper-wrapper">
+							<div class="hero__slide swiper-slide">
+								<div class="hero__slide-wrapper">
+									<div class="hero__slide-body">
+										<div class="hero__rate rate">
+											<div class="rate__title">КУРС ВАЛЮТ ЦБ</div>
+											<ul class="rate__list">
+												<li class="rate__item">1 USD 12234.42 UZS</li>
+												<li class="rate__item">1 EUR 13051.68 UZS</li>
+												<li class="rate__item">1 RUB 133.21 UZS</li>
+											</ul>
+										</div>
+										<h2 class="hero__title">быстрые кредиты по низким процентам,оформление в течение 10 минут</h2>
+										<div class="hero__text text">
+											<p>Мы - команда специалистов, имеющих опыт работы более 20 лет в сфере финансов, предоставляем для своих клиентов оптимальное решение для достижения финансового счастья. Мы строим лучшую микрофинансовую компанию, которая нацелена на достижение успеха с нашими клиентами</p>
+										</div>
+										<div class="hero__image-ibg"><img src="@img/hero/01.jpg" alt=""></div>
+									</div>
+								</div>
+							</div>
+							<div class="hero__slide swiper-slide">
+								<div class="hero__slide-wrapper">
+									<div class="hero__slide-body">
+										<div class="hero__rate rate">
+											<div class="rate__title">КУРС ВАЛЮТ ЦБ</div>
+											<ul class="rate__list">
+												<li class="rate__item">1 USD 12234.42 UZS</li>
+												<li class="rate__item">1 EUR 13051.68 UZS</li>
+												<li class="rate__item">1 RUB 133.21 UZS</li>
+											</ul>
+										</div>
+										<h2 class="hero__title">25% годовых</h2>
+										<div class="hero__text text">
+											<p>Мы - команда специалистов, имеющих опыт работы более 20 лет в сфере финансов, предоставляем для своих клиентов оптимальное решение для достижения финансового счастья. Мы строим лучшую микрофинансовую компанию, которая нацелена на достижение успеха с нашими клиентами</p>
+										</div>
+										<a href="#" class="hero__button button button_line">Подробнее</a>
+										<div class="hero__image-ibg"><img src="@img/hero/02.jpg" alt=""></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hero__pagination pagination"></div>
+					</div>
+				</div>
+				<div class="hero__calculate calculate">
+					<div class="calculate__title">рассчитать</div>
+					<form action="#" class="calculate__form">
+						<select name="form[]" class="form">
+							<option selected>Выберите продукт</option>
+							<option value="2">Пункт №2</option>
+							<option value="3">Пункт №3</option>
+							<option value="4">Пункт №4</option>
+						</select>
+
+						<div class="calculate__line">
+							<div class="calculate__range range" data-range>
+								<input gata-range-input autocomplete="off" type="text" name="form[]" placeholder="Сумма займа" class="calculate__input">
+								<div data-range-line data-from="0" data-to="10000000" data-start="0"></div>
+								<div class="range__content">
+									<div class="range__content-item"><span>0</span></div>
+									<div class="range__content-item"><span>10.000.000</span> сум</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="calculate__line">
+							<div class="calculate__range range" data-range>
+								<input gata-range-input autocomplete="off" type="text" name="form[]" placeholder="Срок" class="calculate__input">
+								<div data-range-line data-from="0" data-to="30" data-start="0"></div>
+								<div class="range__content">
+									<div class="range__content-item"><span>0</span></div>
+									<div class="range__content-item"><span>30</span> дней</div>
+								</div>
+							</div>
+						</div>
+
+						<select name="form[]" class="form">
+							<option selected>В наличной форме</option>
+							<option value="2">Пункт №2</option>
+							<option value="3">Пункт №3</option>
+							<option value="4">Пункт №4</option>
+						</select>
+
+						<div class="calculate__bottom">
+							<div class="calculate__bottom-item">
+								<div class="calculate__bottom-title">Ежемесячный платеж</div>
+								<div class="calculate__bottom-number">200.000 сум</div>
+							</div>
+							<div class="calculate__bottom-item">
+								<div class="calculate__bottom-title">До ( включительно )</div>
+								<div class="calculate__bottom-number">7 ноября, 2024</div>
+							</div>
+						</div>
+
+						<button type="button" class="calculate__button button">Подать заявку</button>
+					</form>
+				</div>
+			</section>
+
+			<!-- <section class="test">
+				<div class="test__container">
+					<div class="test__body">
+
+					</div>
+				</div>
+			</section> -->
+
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

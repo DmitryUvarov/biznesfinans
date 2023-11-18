@@ -1,3 +1,265 @@
 //====================================================================================================
 
+.hero {
+  position: relative;
+  background-color: #f3f1ff;
+
+  @media (max-width: $tablet) {
+    padding-bottom: toRem(35);
+  }
+
+  &__body {
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+    min-width: 100vw;
+    padding-top: calc(var(--header-height) + toRem(50));
+
+    @include adaptiveValue("padding-bottom", 150, 100, 1, 991, 375);
+    @media (min-width: $tablet) {
+      padding-bottom: toRem(195);
+    }
+    @media (max-width: $tablet) {
+      min-height: 100svh;
+      padding-top: calc(var(--header-height) + toRem(20));
+    }
+
+    pointer-events: none;
+    &.swiper-slide-active {
+      pointer-events: all;
+    }
+  }
+
+  &__slide-wrapper {
+    height: 100%;
+    max-width: toRem($containerWidth);
+    margin: 0 auto;
+    padding: 0 toRem(15);
+  }
+
+  &__slide-body {
+    height: 100%;
+    @media (min-width: $tablet) {
+      padding-right: percent(450, 1180);
+    }
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__rate {
+    @include adaptiveValue("margin-bottom", 40, 25);
+  }
+
+  &__title {
+    color: #fff;
+    @include adaptiveValue("font-size", 50, 26);
+    font-weight: 500;
+    line-height: 100%; /* 100% */
+    text-transform: uppercase;
+    @include adaptiveValue("margin-bottom", 23, 15);
+  }
+
+  &__text {
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  &__image-ibg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__button {
+    min-width: toRem(239);
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      margin-top: auto;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    width: 100%;
+    @include adaptiveValue("bottom", 47, 15, 0, 991, 375);
+    left: toRem(0);
+  }
+
+  &__calculate {
+    @media (min-width: $tablet) {
+      position: absolute;
+      width: 100%;
+      top: calc(var(--header-height) + toRem(50));
+      right: toRem(15);
+    }
+
+    @media (min-width: $pc) {
+      right: calc(((100vw - 1180px) / 2) - 15px);
+    }
+
+    @media (max-width: $pc) and (min-width: $tablet) {
+      width: percent(435, 1180);
+    }
+
+    @media (max-width: $tablet) {
+      margin: toRem(30) auto 0;
+    }
+    @media (max-width: $mobile) {
+      margin-right: toRem(15);
+      margin-left: toRem(15);
+    }
+  }
+}
+
+.rate {
+  padding: toRem(17) toRem(20);
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.27);
+  width: max-content;
+
+  &__title {
+    color: #fff;
+    @include adaptiveValue("font-size", 22, 18);
+    font-weight: 500;
+    line-height: 86.4%; /* 19/22 */
+    @include adaptiveValue("margin-bottom", 16, 12);
+  }
+
+  &__list {
+    display: grid;
+    @include adaptiveValue("gap", 10, 8);
+  }
+
+  &__item {
+    color: #bfbfbf;
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: 111.1%; /* 20/18 */
+  }
+}
+
+.calculate {
+  border-radius: toRem(15);
+  background: #fff;
+
+  @media (min-width: $mobile) {
+    max-width: toRem(435);
+  }
+
+  @include adaptiveValue("padding-top", 28, 20);
+  @include adaptiveValue("padding-bottom", 28, 20);
+  @include adaptiveValue("padding-left", 25, 15, 0, 1210, 991);
+  @include adaptiveValue("padding-right", 25, 15, 0, 1210, 991);
+  &__title {
+    color: #1e1e1e;
+    text-align: center;
+    @include adaptiveValue("font-size", 35, 28);
+    font-weight: 500;
+    line-height: 114.3%; /* 40/35 */
+    text-transform: uppercase;
+
+    @include adaptiveValue("margin-bottom", 23, 18);
+  }
+
+  &__form {
+    display: grid;
+    gap: toRem(10);
+  }
+
+  &__line {
+  }
+
+  &__input {
+    border-radius: toRem(40);
+    background: #e8e8e8;
+    border: toRem(1) solid #e8e8e8;
+    color: #7e7e7e;
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 400;
+    line-height: 20px; /* 111.111% */
+    @include adaptiveValue("height", 62, 48);
+    width: 100%;
+    padding: 0 toRem(27);
+
+    &:focus {
+      border-color: #1e1e1e;
+      outline: none;
+    }
+  }
+
+  &__range {
+  }
+
+  &__bottom {
+    margin-top: toRem(4);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: toRem(10);
+  }
+
+  &__bottom-item {
+  }
+
+  &__bottom-title {
+    color: #7e7e7e;
+    @include adaptiveValue("font-size", 17, 15);
+    line-height: 117.6%; /* 20/17 */
+    margin-bottom: toRem(2);
+  }
+
+  &__bottom-number {
+    color: #1e1e1e;
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 500;
+    line-height: 111.1%; /* 20/18 */
+  }
+
+  &__button {
+    margin-top: toRem(8);
+  }
+}
+
 //====================================================================================================
+.calculate {
+  &__line {
+  }
+
+  &__range {
+  }
+
+  &__input {
+  }
+}
+.range {
+  [data-range-line] {
+    width: calc(100% - toRem(40));
+    margin: 0 toRem(20);
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: toRem(10);
+
+    margin: toRem(13) toRem(15) 0;
+  }
+
+  &__content-item {
+    color: #7e7e7e;
+    font-size: 17px;
+    line-height: 117.6%; /* 20/17 */
+  }
+}

@@ -1,47 +1,54 @@
 // Підключення з node_modules
 import * as noUiSlider from 'nouislider';
 
-// Підключення стилів з scss/base/forms/range.scss 
+// Підключення стилів з scss/base/forms/range.scss
 // у файлі scss/forms/forms.scss
 
 // Підключення стилів з node_modules
-import 'nouislider/dist/nouislider.css';
+// import 'nouislider/dist/nouislider.css';
 
 export function rangeInit() {
-	const priceSlider = document.querySelector('#range');
-	if (priceSlider) {
-		let textFrom = priceSlider.getAttribute('data-from');
-		let textTo = priceSlider.getAttribute('data-to');
-		noUiSlider.create(priceSlider, {
-			start: 0, // [0,200000]
-			connect: [true, false],
-			range: {
-				'min': [0],
-				'max': [200000]
-			},
-			/*
-			format: wNumb({
-				decimals: 0
+	const priceSliders = document.querySelectorAll('[data-range]');
+
+	if (priceSliders) {
+
+		priceSliders.forEach(priceSlider => {
+
+			let priceSliderLine = priceSlider.querySelector('[data-range-line]')
+
+			let textFrom = priceSliderLine.getAttribute('data-from');
+			let textTo = priceSliderLine.getAttribute('data-to');
+			let textStart = priceSliderLine.getAttribute('data-start');
+
+			let inputRange = priceSlider.querySelector('[gata-range-input]')
+
+
+			noUiSlider.create(priceSliderLine, {
+				start: [Number(textStart)], // [0,200000]
+				connect: [true, false],
+				range: {
+					'min': [Number(textFrom)],
+					'max': [Number(textTo)]
+				}
+			});
+
+			priceSliderLine.noUiSlider.on('update', function (values, handle) {
+
+				if (Math.floor(values[handle]) == 0) {
+					inputRange.value = ''
+				} else {
+					inputRange.value = Math.floor(values[handle])
+				}
+
 			})
-			*/
+
+			inputRange.addEventListener('change', (e) => {
+				let valueInput = e.target.value
+				priceSliderLine.noUiSlider.set([valueInput, null]);
+			});
+
 		});
-		/*
-		const priceStart = document.getElementById('price-start');
-		const priceEnd = document.getElementById('price-end');
-		priceStart.addEventListener('change', setPriceValues);
-		priceEnd.addEventListener('change', setPriceValues);
-		*/
-		function setPriceValues() {
-			let priceStartValue;
-			let priceEndValue;
-			if (priceStart.value != '') {
-				priceStartValue = priceStart.value;
-			}
-			if (priceEnd.value != '') {
-				priceEndValue = priceEnd.value;
-			}
-			priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
-		}
+
 	}
 }
 rangeInit();

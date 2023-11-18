@@ -9,21 +9,36 @@
 
   border-radius: 30px;
   background: #271c6c;
-
   color: #fff;
+
   text-align: center;
   font-family: "Futura PT";
   font-size: 19px;
   font-weight: 500;
   line-height: 100%; /* 100% */
-
+  transition: all 0.3s ease 0s;
   @include adaptiveValue("height", 61, 45);
 
   @media (any-hover: hover) {
     &:hover {
+      box-shadow: rgba(39, 28, 108, 0.4) 0px 7px 29px 0px;
     }
   }
   &--fw {
     width: 100%;
+  }
+
+  &_line {
+    background-color: transparent;
+    border-radius: toRem(40);
+    border: toRem(1) solid #fff;
+    @include adaptiveValue("height", 58, 45);
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #271c6c;
+        border: toRem(1) solid #271c6c;
+      }
+    }
   }
 }
