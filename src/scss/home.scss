@@ -70,6 +70,7 @@
 
   &__text {
     @include adaptiveValue("margin-bottom", 30, 20);
+    color: #eae5e5;
   }
 
   &__image-ibg {
@@ -447,5 +448,61 @@
 
   &__text {
     color: #7e7e7e;
+  }
+}
+
+//========================================================================================================================================================
+
+.advantages {
+  background-color: #f3f1ff;
+  @include adaptiveValue("padding-top", 80, 35);
+  @include adaptiveValue("padding-bottom", 40, 20);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 30);
+  }
+  &__container {
+  }
+
+  &__items {
+    display: grid;
+    @include adaptiveValue("gap", 20, 15);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
+  }
+
+  &__item {
+  }
+}
+
+.item-advantages {
+  border-radius: toRem(15);
+  background: #fff;
+  display: grid;
+  @include adaptiveValue("gap", 15, 10);
+  @include adaptiveValue("padding", 20, 15);
+  &__ico {
+    @include adaptiveValue("width", 67, 50);
+    @include adaptiveValue("height", 67, 50);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b40e5d;
+    @include adaptiveValue("padding", 15, 12);
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    color: #1e1e1e;
+    @include adaptiveValue("font-size", 24, 22);
+    font-weight: 500;
+    line-height: 100%; /* 83.333% */
+  }
+
+  &__text {
   }
 }
