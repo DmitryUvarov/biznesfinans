@@ -1,3 +1,92 @@
 //====================================================================================================
+.footer {
+  padding-top: toRem(30);
+  @include adaptiveValue("padding-bottom", 70, 40);
+  &__container {
+  }
+
+  &__logo {
+    display: block;
+    @include adaptiveValue("max-width", 95, 75);
+    margin-bottom: toRem(12);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+  }
+
+  &__body {
+    border-top: toRem(1) solid rgba(126, 126, 126, 0.31);
+    @include adaptiveValue("margin-top", 27, 15);
+    @include adaptiveValue("padding-top", 32, 15);
+    display: flex;
+
+    @include adaptiveValue("column-gap", 100, 50, 0, 1210, 991);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      row-gap: toRem(20);
+    }
+  }
+
+  &__list {
+  }
+
+  &__title {
+    white-space: nowrap;
+    color: #1e1e1e;
+    @include adaptiveValue("font-size", 22, 20);
+    line-height: 100%; /* 90.909% */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 32, 15);
+    }
+  }
+
+  &__item {
+    color: #7e7e7e;
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: 111.1%; /* 20/18 */
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 24, 10);
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__list-body {
+    display: flex;
+    flex-wrap: wrap;
+    @include adaptiveValue("gap", 65, 20, 0, 1210, 991);
+  }
+
+  &__links {
+    white-space: nowrap;
+    display: flex;
+    column-gap: toRem(20);
+
+    color: #1e1e1e;
+    font-weight: 500;
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: 111.1%; /* 20/18 */
+    &::before {
+      color: #271c6c;
+      @include adaptiveValue("font-size", 25, 20);
+    }
+  }
+
+  &__links-body {
+    display: grid;
+    @include adaptiveValue("gap", 14, 10);
+  }
+
+  &__social {
+  }
+}
 
 //====================================================================================================
