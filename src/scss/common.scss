@@ -65,6 +65,67 @@
 }
 
 //========================================================================================================================================================
+
+.submit {
+  @media (max-width: $mobile) {
+    @include adaptiveValue("padding-top", 80, 35);
+  }
+
+  &__body {
+    display: flex;
+    @include adaptiveValue("gap", 67, 10, 0, 1210, 991);
+
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__image-ibg--contain {
+    flex: 0 0 percent(558, 1180);
+    @media (max-width: $mobile) {
+      padding-bottom: percent(230, 345);
+    }
+
+    img {
+      object-position: bottom;
+    }
+  }
+
+  &__content {
+    @media (min-width: $mobile) {
+      @include adaptiveValue("padding-top", 60, 30, 0, 1210, 991);
+      @include adaptiveValue("padding-bottom", 90, 40, 0, 1210, 991);
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 50, 32, 0, 1210, 991);
+    @include adaptiveValue("margin-bottom", 16, 10, 0, 1210, 991);
+  }
+
+  &__text {
+    max-width: toRem(430);
+    color: #7e7e7e;
+    @include adaptiveValue("margin-bottom", 32, 20, 0, 1210, 991);
+  }
+
+  &__form {
+    @media (min-width: $mobile) {
+      max-width: toRem(425);
+    }
+  }
+
+  &__input {
+    margin-bottom: toRem(12);
+  }
+
+  &__button {
+    margin-top: toRem(16);
+    @include adaptiveValue("height", 64, 48);
+    width: 100%;
+  }
+}
+
 //========================================================================================================================================================
 
 // .fancybox__container {
