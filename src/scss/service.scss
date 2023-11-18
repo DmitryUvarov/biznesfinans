@@ -121,3 +121,50 @@
   &__text {
   }
 }
+
+//========================================================================================================================================================
+
+.dopservice {
+  background-color: #f3f1ff;
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 80, 40);
+  &__container {
+  }
+
+  &__items {
+    display: grid;
+    @include adaptiveValue("gap", 20, 15);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
+  }
+
+  &__item {
+  }
+}
+.item-dopservice {
+  border-radius: 15px;
+  background: #fff;
+  overflow: hidden;
+  &__image-ibg {
+    padding-bottom: percent(220, 380);
+  }
+
+  &__content {
+    padding: toRem(20) toRem(25) toRem(44);
+
+    @media (max-width: $mobile) {
+      padding: toRem(20) toRem(15) toRem(24);
+    }
+  }
+
+  &__title {
+    color: #1e1e1e;
+    @include adaptiveValue("font-size", 22, 20);
+    font-weight: 500;
+    line-height: 20px; /* 90.909% */
+
+    @include adaptiveValue("margin-bottom", 19, 15);
+  }
+
+  &__text {
+  }
+}
