@@ -238,4 +238,9 @@ export function rangeInit() {
 
     }
 }
-rangeInit();
+
+window.addEventListener('load', pageLoadRange)
+
+function pageLoadRange() {
+	rangeInit();
+}

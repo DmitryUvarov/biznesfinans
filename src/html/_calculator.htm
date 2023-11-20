@@ -5,21 +5,21 @@
             <div class="calculator__image-ibg"><img src="@img/calculator/01.jpg" alt=""></div>
             <div class="calculator__calculate calculate">
                 <div class="calculate__title">рассчитать</div>
-                <form action="#" class="calculate__form">
-                    <select name="form[]" class="form">
-                        <option selected>Выберите продукт</option>
-                        <option value="2">Пункт №2</option>
-                        <option value="3">Пункт №3</option>
-                        <option value="4">Пункт №4</option>
+                <form action="#" class="calculate__form" data-text-months="месяцев" data-text-day="дней" data-text-out-months="Ежемесячный платеж" data-text-out-day="Итоговый платеж">
+                    <select name="form[]" class="form" data-product>
+                        <option data-rate="84" data-months="6" data-value="5000000" value="QULAY XARID">QULAY XARID</option>
+                        <option data-rate="60" data-months="36" data-value="300000000" value="HAMKOR">HAMKOR</option>
+                        <option data-rate="80" data-months="12" data-value="20000000" value="TA’LIM">TA’LIM</option>
+                        <option data-rate="0.3" data-day="30" data-value="1200000" value="ISHONCH">ISHONCH</option>
                     </select>
 
                     <div class="calculate__line">
                         <div class="calculate__range range" data-range>
                             <input gata-range-input autocomplete="off" type="text" name="form[]" placeholder="Сумма займа" class="calculate__input">
-                            <div data-range-line data-from="0" data-to="10000000" data-start="0"></div>
+                            <div data-range-line data-to="5000000"></div>
                             <div class="range__content">
                                 <div class="range__content-item"><span>0</span></div>
-                                <div class="range__content-item"><span>10.000.000</span> сум</div>
+                                <div class="range__content-item"><span data-max></span></div>
                             </div>
                         </div>
                     </div>
@@ -27,29 +27,27 @@
                     <div class="calculate__line">
                         <div class="calculate__range range" data-range>
                             <input gata-range-input autocomplete="off" type="text" name="form[]" placeholder="Срок" class="calculate__input">
-                            <div data-range-line data-from="0" data-to="30" data-start="0"></div>
+                            <div data-range-line data-range-line-day data-from="1" data-to="6" data-start="1"></div>
                             <div class="range__content">
-                                <div class="range__content-item"><span>0</span></div>
-                                <div class="range__content-item"><span>30</span> дней</div>
+                                <div class="range__content-item"><span>1</span></div>
+                                <div class="range__content-item"><span data-text></span></div>
                             </div>
                         </div>
                     </div>
 
                     <select name="form[]" class="form">
-                        <option selected>В наличной форме</option>
-                        <option value="2">Пункт №2</option>
-                        <option value="3">Пункт №3</option>
-                        <option value="4">Пункт №4</option>
+                        <option value="1" selected>В наличной форме</option>
+                        <option value="2">На счет</option>
                     </select>
 
                     <div class="calculate__bottom">
                         <div class="calculate__bottom-item">
-                            <div class="calculate__bottom-title">Ежемесячный платеж</div>
-                            <div class="calculate__bottom-number">200.000 сум</div>
+                            <div class="calculate__bottom-title" data-output-title></div>
+                            <div class="calculate__bottom-number" data-output-number></div>
                         </div>
                         <div class="calculate__bottom-item">
                             <div class="calculate__bottom-title">До ( включительно )</div>
-                            <div class="calculate__bottom-number">7 ноября, 2024</div>
+                            <div class="calculate__bottom-number" data-date>7 ноября, 2024</div>
                         </div>
                     </div>
 
