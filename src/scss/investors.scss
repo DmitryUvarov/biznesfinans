@@ -1,0 +1,324 @@
+.program {
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 80, 40);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 25);
+  }
+
+  &__items {
+    display: grid;
+    gap: toRem(15);
+  }
+
+  &__item {
+  }
+}
+
+.item-program {
+  background-color: #f5f5f5;
+  border-radius: toRem(15);
+  overflow: hidden;
+
+  display: flex;
+  @include adaptiveValue("gap", 65, 30, 0, 1210, 767);
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: toRem(20) 0 toRem(35) toRem(20);
+
+    @media (max-width: $mobile) {
+      padding: toRem(20) toRem(15) 0;
+    }
+  }
+
+  &__subtitle {
+    color: #7e7e7e;
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 125%; /* 40/24 */
+    text-transform: uppercase;
+
+    margin-bottom: toRem(5);
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 40, 25);
+    font-weight: 500;
+    line-height: 100%; /* 100% */
+    text-transform: uppercase;
+
+    @include adaptiveValue("margin-bottom", 25, 15);
+  }
+
+  &__text {
+    margin-top: auto;
+  }
+
+  &__image-ibg {
+    flex: 0 0 percent(400, 1180);
+    border-radius: toRem(15);
+    overflow: hidden;
+    padding-bottom: percent(357, 1180);
+
+    @media (max-width: $mobile) {
+      padding-bottom: percent(200, 345);
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.investors-simple {
+  background-color: #f3f1ff;
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 80, 40);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 25);
+  }
+
+  &__items {
+    display: grid;
+    @include adaptiveValue("gap", 20, 15);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(260), 1fr));
+  }
+
+  &__item {
+  }
+}
+
+.item-investors-simple {
+  @include adaptiveValue("padding-left", 20, 15);
+  @include adaptiveValue("padding-right", 20, 15);
+  @include adaptiveValue("padding-top", 25, 20);
+  @include adaptiveValue("padding-bottom", 25, 20);
+  border-radius: toRem(15);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  @include adaptiveValue("column-gap", 20, 10);
+  &__ico {
+    background-color: #b40e5d;
+    border-radius: 50%;
+    @include adaptiveValue("width", 65, 45);
+    @include adaptiveValue("height", 65, 45);
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: toRem(12);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    color: #1e1e1e;
+  }
+}
+
+//========================================================================================================================================================
+
+.investors-advantages {
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 80, 40);
+  &__container {
+  }
+
+  &__maintitle {
+    @include adaptiveValue("margin-bottom", 50, 25);
+  }
+
+  &__items {
+    display: grid;
+    @include adaptiveValue("gap", 32, 15);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(260), 1fr));
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__image {
+    position: relative;
+    padding-bottom: 100%;
+    @include adaptiveValue("margin-bottom", 23, 15);
+
+    &::before {
+      content: "";
+      background-image: url("@img/investors/adv-bg.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: percent(67, 225);
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 24, 18);
+    font-weight: 500;
+    line-height: 100%; /* 91.667% */
+
+    @include adaptiveValue("margin-bottom", 16, 10);
+  }
+
+  &__text {
+  }
+}
+
+//========================================================================================================================================================
+
+.bonds {
+  background-color: #f3f1ff;
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 80, 40);
+  &__container {
+  }
+
+  &__maintitle {
+    @include adaptiveValue("margin-bottom", 50, 25);
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: percent(380, 1180) auto percent(380, 1180);
+    @include adaptiveValue("gap", 35, 15, 0, 1210, 991);
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 50%;
+      justify-content: center;
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: 60%;
+    }
+    @media (max-width: em(600)) {
+      grid-template-columns: percent(300, 345);
+    }
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list {
+    display: grid;
+    @include adaptiveValue("gap", 20, 15);
+  }
+
+  &__item {
+  }
+
+  &__percent {
+    height: fit-content;
+    position: relative;
+    padding-bottom: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    text-align: center;
+    @include adaptiveValue("font-size", 70, 45);
+    font-weight: 500;
+    line-height: 100%; /* 57.143% */
+    text-transform: uppercase;
+
+    @media (max-width: $tablet) {
+      padding-bottom: 60%;
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    @media (max-width: $mobile) {
+      padding-bottom: 50%;
+      width: 50%;
+    }
+    @media (max-width: em(600)) {
+      padding-bottom: 60%;
+      width: 60%;
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      content: "";
+      background-image: url("@img/investors/bonds-bg.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.item-bonds {
+  @include adaptiveValue("padding-left", 25, 15, 0, 1210, 991);
+  @include adaptiveValue("padding-right", 25, 15, 0, 1210, 991);
+  @include adaptiveValue("padding-top", 35, 20);
+  @include adaptiveValue("padding-bottom", 35, 20);
+  border-radius: toRem(15);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  @include adaptiveValue("column-gap", 20, 10);
+  &__ico {
+    background-color: #b40e5d;
+    border-radius: 50%;
+    @include adaptiveValue("width", 87, 60);
+    @include adaptiveValue("height", 87, 60);
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("padding", 20, 17);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 40, 30);
+    font-weight: 500;
+    line-height: 100%; /* 50% */
+  }
+
+  &__text {
+  }
+}

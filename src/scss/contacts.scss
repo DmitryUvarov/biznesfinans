@@ -1,0 +1,77 @@
+.contacts {
+  background: #f3f1ff;
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 150, 50);
+  &__container {
+  }
+
+  &__items {
+    display: grid;
+    @include adaptiveValue("gap", 20, 15);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
+  }
+
+  &__item {
+  }
+}
+.item-contacts {
+  border-radius: 15px;
+  background: #fff;
+  padding: toRem(25) toRem(25) toRem(35);
+
+  @media (max-width: $mobile) {
+    padding: toRem(25) toRem(15);
+  }
+  &__title {
+    @include adaptiveValue("font-size", 24, 22);
+    line-height: 100%; /* 83.333% */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 23, 15);
+    }
+    &:not(:first-child) {
+      @include adaptiveValue("margin-top", 25, 15);
+    }
+  }
+
+  &__line {
+    display: flex;
+
+    &::before {
+      @include adaptiveValue("font-size", 24, 21);
+      color: #b40e5d;
+      flex: 0 0 toRem(30);
+      @include adaptiveValue("margin-right", 15, 10);
+    }
+
+    &._icon-mail {
+      &::before {
+        @include adaptiveValue("font-size", 21, 18);
+      }
+    }
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 13, 10);
+    }
+  }
+
+  &__link {
+    color: #7e7e7e;
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: 111.1%; /* 20/18 */
+
+    &:not(:last-child) {
+      &::after {
+        content: ",";
+      }
+    }
+  }
+  a {
+    @media (any-hover: hover) {
+      &:hover {
+        color: #271c6c;
+        text-decoration: underline;
+      }
+    }
+  }
+}
