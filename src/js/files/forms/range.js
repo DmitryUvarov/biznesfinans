@@ -211,7 +211,7 @@ export function rangeInit() {
                         priceSliderLine.noUiSlider.updateOptions({
                             start: [textFrom ? Number(textFrom) : 0],
                             range: {
-                                'min': [0],
+                                'min': [textFrom ? Number(textFrom) : 0],
                                 'max': [Number(maxNum)]
                             },
                         });
