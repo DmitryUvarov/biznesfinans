@@ -40,7 +40,7 @@ flsFunctions.menuInit();
 /* Враховування плаваючої панелі на мобільних пристроях при 100vh */
 // flsFunctions.fullVHfix();
 /* Форматування чисел */
-// import './libs/wNumb.min.js';
+import './libs/wNumb.min.js';
 
 /*
 Модуль "Спойлери"
