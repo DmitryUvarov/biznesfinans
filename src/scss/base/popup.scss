@@ -83,6 +83,15 @@ body::after {
   }
 }
 
+.popup__ico {
+  @include adaptiveValue("margin-bottom", 40, 20);
+  @include adaptiveValue("width", 107, 85);
+  margin: 0 auto;
+  img {
+    max-width: 100%;
+  }
+}
+
 .popup__title {
   @include adaptiveValue("margin-bottom", 20, 15);
 }

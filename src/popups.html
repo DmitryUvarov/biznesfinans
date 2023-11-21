@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        <main class="page">
+            <div class="__container">
+                <button data-popup="#popup" class="form-submit__button button">Модалка</button>
+                <button data-popup="#thank" class="form-submit__button button">Модалка ( заявка подана )</button>
+            </div>
+
+        </main>
+        @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

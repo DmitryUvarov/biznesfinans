@@ -227,7 +227,7 @@
 
   &__list {
     display: grid;
-    @include adaptiveValue("gap", 20, 15);
+    @include adaptiveValue("gap", 20, 15, 0, 1210, 991);
   }
 
   &__item {
@@ -252,6 +252,7 @@
       padding-bottom: 60%;
       width: 60%;
       margin: 0 auto;
+      order: -1;
     }
 
     @media (max-width: $mobile) {
