@@ -29,7 +29,8 @@
     }
     @media (max-width: $tablet) {
       min-height: 100svh;
-      padding-top: calc(var(--header-height) + toRem(20));
+      // padding-top: calc(var(--header-height) + toRem(20));
+      padding-top: toRem(27);
     }
 
     pointer-events: none;
@@ -58,13 +59,13 @@
   }
 
   &__rate {
-    @include adaptiveValue("margin-bottom", 40, 25);
+    @include adaptiveValue("margin-bottom", 40, 14);
   }
 
   &__title {
     color: #fff;
-    @include adaptiveValue("margin-bottom", 23, 15);
-    @include adaptiveValue("font-size", 60, 26);
+    @include adaptiveValue("margin-bottom", 23, 40);
+    @include adaptiveValue("font-size", 60, 40);
     font-weight: 700;
     line-height: 130%; /* 100% */
     text-transform: uppercase;
@@ -74,7 +75,7 @@
     }
 
     b {
-      @include adaptiveValue("font-size", 120, 40);
+      @include adaptiveValue("font-size", 120, 75);
     }
   }
 
@@ -96,8 +97,9 @@
     min-width: toRem(239);
 
     @media (max-width: $mobile) {
-      width: 100%;
-      margin-top: auto;
+      // width: 100%;
+      // margin-top: auto;
+      width: fit-content;
     }
   }
 
@@ -169,10 +171,15 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: toRem(40);
+    @include adaptiveValue("column-gap", 40, 30);
     row-gap: toRem(20);
     max-width: toRem(430);
-    @include adaptiveValue("margin-bottom", 35, 20);
+    @include adaptiveValue("margin-bottom", 35, 30);
+
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -185,8 +192,8 @@
   &__item-ico {
     background-color: #b40e5d;
     border-radius: 50%;
-    @include adaptiveValue("width", 80, 60);
-    @include adaptiveValue("height", 80, 60);
+    @include adaptiveValue("width", 80, 55);
+    @include adaptiveValue("height", 80, 55);
 
     display: flex;
     justify-content: center;
@@ -214,7 +221,7 @@
 
   &__title {
     color: #fff;
-    @include adaptiveValue("font-size", 22, 18);
+    font-size: toRem(22);
     font-weight: 500;
     line-height: 86.4%; /* 19/22 */
     @include adaptiveValue("margin-bottom", 16, 12);
@@ -222,12 +229,12 @@
 
   &__list {
     display: grid;
-    @include adaptiveValue("gap", 10, 8);
+    gap: toRem(10);
   }
 
   &__item {
     color: #bfbfbf;
-    @include adaptiveValue("font-size", 18, 16);
+    font-size: toRem(18);
     line-height: 111.1%; /* 20/18 */
   }
 }

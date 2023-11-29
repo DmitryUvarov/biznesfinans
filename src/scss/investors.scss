@@ -132,6 +132,7 @@
 .investors-advantages {
   @include adaptiveValue("padding-top", 80, 40);
   @include adaptiveValue("padding-bottom", 80, 40);
+
   &__container {
   }
 
@@ -151,6 +152,9 @@
 
   &__item {
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
   }
 
   &__image {
@@ -186,6 +190,12 @@
     line-height: 100%; /* 91.667% */
 
     @include adaptiveValue("margin-bottom", 16, 10);
+
+    flex: 0 0 toRem(48);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__text {

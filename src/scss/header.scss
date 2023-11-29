@@ -349,12 +349,12 @@
       position: absolute;
       top: calc(100% + toRem(30));
       left: 0;
-      background-color: #fff;
-
+      background-color: #b40e5d;
+      border-radius: toRem(20);
       padding: toRem(16) toRem(20);
       font-weight: 500;
       color: #1e1e1e;
-      min-width: toRem(200);
+      min-width: toRem(240);
 
       opacity: 0;
       visibility: hidden;
@@ -394,13 +394,20 @@
     position: relative;
     display: block;
     padding: toRem(5) 0;
-
+    color: #df4c92;
     @media (max-width: $mobile) {
       font-size: toRem(20);
+    }
+    &.active {
+      color: #fff;
+      @media (max-width: $mobile) {
+        color: #b40e5d;
+      }
     }
 
     @media (any-hover: hover) {
       &:hover {
+        color: #fff;
         &::after {
           opacity: 1;
         }
@@ -414,7 +421,7 @@
       height: toRem(1);
       bottom: toRem(4);
       left: 0;
-      background-color: #1e1e1e;
+      background-color: #fff;
       opacity: 0;
     }
   }

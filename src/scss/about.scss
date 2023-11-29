@@ -319,6 +319,9 @@
     top: 0;
     left: 0;
     z-index: 0;
+
+    overflow: hidden;
+    border-radius: toRem(20);
   }
 
   &__title {
