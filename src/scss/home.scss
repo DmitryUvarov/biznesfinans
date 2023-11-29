@@ -200,7 +200,7 @@
 
   &__item-text {
     color: #eae5e5;
-    @include adaptiveValue("font-size", 19, 18);
+    @include adaptiveValue("font-size", 19, 16);
     line-height: 105.3%; /* 20/19 */
     text-align: center;
   }
