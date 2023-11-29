@@ -70,6 +70,48 @@
   }
 }
 
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: toRem(8);
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    background-color: #ffffff;
+
+    @include adaptiveValue("width", 55, 50);
+    @include adaptiveValue("height", 55, 50);
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
+
+    img {
+      @include adaptiveValue("max-width", 12, 10);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: #1e1e1e;
+      }
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.6;
+      cursor: default;
+      @media (any-hover: hover) {
+        &:hover {
+          border-color: #fff;
+        }
+      }
+    }
+  }
+}
+// .button-prev {
+// }
+// .button-next {
+// }
+
 //========================================================================================================================================================
 
 .submit {

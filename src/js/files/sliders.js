@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Pagination, EffectFade, Autoplay, Thumbs } from 'swiper/modules';
+import { Pagination, EffectFade, Autoplay, Thumbs, Navigation } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay,
@@ -133,7 +133,7 @@ function initSliders() {
 
 	if (document.querySelector('.products__slider')) {
 		let productsSlider = new Swiper('.products__slider', {
-			modules: [Pagination],
+			modules: [Pagination, Navigation],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 4,
@@ -141,9 +141,9 @@ function initSliders() {
 			speed: 800,
 			lazyPreloaderClass: 'preloader',
 			slideToClickedSlide: true,
-			pagination: {
-				el: '.products__slider .pagination',
-				clickable: true,
+			navigation: {
+				prevEl: '.products__navigation .button-prev',
+				nextEl: '.products__navigation .button-next',
 			},
 			breakpoints: {
 				320: {
@@ -169,7 +169,7 @@ function initSliders() {
 			},
 		});
 		new Swiper('.products__slider-big', {
-			modules: [Pagination, Thumbs, Autoplay],
+			modules: [Pagination, Thumbs],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -177,11 +177,6 @@ function initSliders() {
 			speed: 800,
 			autoHeight: true,
 			lazyPreloaderClass: 'preloader',
-
-			autoplay: {
-				delay: 5000,
-				disableOnInteraction: false,
-			},
 
 			thumbs: {
 				swiper: productsSlider,

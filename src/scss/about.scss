@@ -136,6 +136,12 @@
     margin-bottom: toRem(15);
   }
 
+  &__subtext {
+    text-align: center;
+    max-width: toRem(1080);
+    margin: 0 auto;
+  }
+
   &__text {
     text-align: center;
     max-width: toRem(1000);

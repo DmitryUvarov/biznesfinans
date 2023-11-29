@@ -1,9 +1,9 @@
 //====================================================================================================
 .header {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
+  position: relative;
+  // width: 100%;
+  // top: 0;
+  // left: 0;
   z-index: 1;
 
   @media (max-width: $mobile) {
@@ -49,7 +49,7 @@
   &__logo {
     position: relative;
     z-index: 6;
-    @include adaptiveValue("max-width", 62, 55, 0, 767, 375);
+    @include adaptiveValue("max-width", 132, 80, 0, 767, 375);
     flex-shrink: 0;
 
     img {
@@ -108,6 +108,10 @@
 
   &__menu {
   }
+
+  &__bottom {
+    background: #271c6c;
+  }
 }
 
 .item-header {
@@ -117,7 +121,7 @@
 
   &::before {
     @include adaptiveValue("font-size", 26, 20);
-
+    color: #271c6c;
     @media (max-width: $mobile) {
       align-self: flex-start;
     }
@@ -130,11 +134,13 @@
     font-size: toRem(17);
     line-height: 111.8%; /* 19/17 */
     margin-bottom: toRem(2);
+    color: #7e7e7e;
   }
 
   &__link {
     font-weight: 500;
     line-height: 100%; /* 100% */
+    color: #1e1e1e;
 
     display: flex;
     align-items: center;
@@ -232,9 +238,6 @@
 }
 
 .menu {
-  border-radius: toRem(15);
-  background: rgba(0, 0, 0, 0.45);
-
   &__body {
     text-transform: uppercase;
     padding: toRem(10) 0;
@@ -441,7 +444,7 @@
       position: absolute;
       width: 100%;
       height: toRem(2);
-      background-color: #fff;
+      background-color: #1e1e1e;
     }
     &::before {
       top: 0;
