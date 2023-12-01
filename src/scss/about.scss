@@ -4,13 +4,14 @@
   }
 
   &__body {
-    min-height: toRem(320);
-    padding-top: calc(var(--header-height) + toRem(45));
+    // min-height: toRem(320);
+    min-height: toRem(170);
+    padding-top: toRem(45);
     @media (max-width: $tablet) {
-      padding-top: calc(var(--header-height) + toRem(40));
+      padding-top: toRem(40);
     }
     @media (max-width: $mobile) {
-      padding-top: calc(var(--header-height) + toRem(30));
+      padding-top: toRem(30);
     }
     @include adaptiveValue("padding-bottom", 50, 25);
   }

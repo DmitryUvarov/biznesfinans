@@ -91,6 +91,7 @@ export function rangeInit() {
 
             let priceSliderLine = priceSlider.querySelector('[data-range-line]')
 
+            let textStape = priceSliderLine.getAttribute('data-step')
             let textFrom = priceSliderLine.getAttribute('data-from');
             let textTo = priceSliderLine.getAttribute('data-to');
             let textStart = priceSliderLine.getAttribute('data-start');
@@ -165,7 +166,7 @@ export function rangeInit() {
             noUiSlider.create(priceSliderLine, {
                 start: [Number(textStart)], // [0,200000]
                 connect: [true, false],
-                step: 1,
+                step: textStape ? Number(textStape) : 1,
                 range: {
                     'min': [textFrom ? Number(textFrom) : 0],
                     'max': [Number(textTo)]
